@@ -1,0 +1,138 @@
+:root{
+    --border-radius:7px;
+    --FormColor:#2f2c3a;
+    --TodosColor:#1c1b27;
+    --transition-duration:0.1s;
+    --Task-color:#ffffffe0;
+}
+body{
+    margin: 0;
+    font-family: 'Alexandria', sans-serif;
+    background-color:burlywood;
+    direction: rtl;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Alexandria', sans-serif;
+}
+
+.App{
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.TodoList-parent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border-radius: var(--border-radius); */
+}
+.TodosForm-parent{
+    display: flex;
+    align-items: center;
+    background-color: var(--FormColor);
+    padding: 15px;
+    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+}
+
+.TodosForm-parent > input{
+    flex: 1;
+    background-color:var(--TodosColor);
+    border: none;
+    padding: 9px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    outline: none;
+    caret-color: white;
+    color: var(--Task-color);
+}
+.TodosForm-parent > button{
+    background-color: #ff618c;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.circle-style{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/* #### */
+/* chage-color-circuit */
+.chage-color-circuit{
+    color: var(--TodosColor);
+    cursor: auto;
+}
+/* #### */
+
+/* ###################################### */
+/* Todos and Todo Style */
+
+.Todos-parent{
+    background-color: #1c1b27;
+    border-radius: 0px 0px var(--border-radius) var(--border-radius);
+    min-height: 200px;
+    padding-bottom: 40px;
+}
+.Todo-parent{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    transition: var(--transition-duration);
+}
+/* .Todo-parent:last-child{
+    margin-bottom: 20px;
+}  */
+.Todo-parent:hover{
+    background-color: var(--FormColor);
+}
+.wirtten-task{
+    flex: 1;
+    color:var(--Task-color);
+    margin-right: 15px;
+}
+.Icons-parent{
+    display: flex;
+    gap: 15px;
+    visibility: hidden;
+    transition: var(--transition-duration);
+}
+.Todo-parent:hover .Icons-parent{
+    visibility: visible;
+}
+.Totrash{
+    color: #ff618c;
+    cursor: pointer;
+}
+.Toedit{
+    color: #dcbd85;
+    cursor: pointer;
+}
+/* ################### */
+/* Done task*/
+.done > .circle-style{
+    color: #74edc4;
+}
+.done > .wirtten-task{
+    text-decoration: line-through;
+}
+/* ################### */
+/* ################### */
+/* NO-Todo */
+.no-Todo{
+    color: var(--Task-color);
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 60px;
+    letter-spacing: 1.5px;
+}
+/* ################### */
